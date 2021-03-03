@@ -1,0 +1,18 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family:'Courier New', Courier, monospace;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  form {
+    margin: 50% auto;
+    border: 2px red dashed;
+    width: 50%;
+    height: 50%;
+  }
