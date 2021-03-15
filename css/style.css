@@ -13,82 +13,239 @@
   height: 100vh;
 }
 .main{
-    margin: 300px auto;
-
+    margin: 200px auto;
     display: grid;
-    height: 33vh;
-    width: 33vw;
-    border: 0.2rem red solid;
+    height: 50vh;
+    width: 55vw;
+    border: 0.1rem gray solid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-template-areas: 
-    " facebook line-top username"
-    "google or password"
-    "twitter line-down login";
-
-    
+    " facebook line-top sign"
+    "google or form"
+    "twitter line-down login";  
 }
-.facebook{
-    border: 0.2rem red solid;
+.facebook{ 
     text-indent: 2rem ;
     grid-area: facebook;
-
+}
+.facebook > button{
+    color:white;
+    background-color:rgb(0, 89, 255);
+    height: 8vh;
+    width: 16vw;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: all 1s;
+    margin-top: 4vh;
+    
+}
+.fa-facebook-f{
+    color: white;
+  margin-right: 2vh;
 }
 .goohle{
-    border: 0.2rem red solid;
-text-indent: 2rem;
 grid-area: google;
 }
+.google > button{
+    color:white;
+    background-color:red;
+    height: 8vh;
+    width: 16vw;
+    font-size: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 1s;
+    font-weight: bolder;
+    margin-left: 2vw;
+}
+.fa-google-plus-g{
+    color: white;
+    margin-right: 2vh;
+}
 .twitter{
-    border: 0.2rem red solid;
     text-indent: 2rem ;
     grid-area: twitter;
-
 }
-
+.twitter > button{
+    color:white;
+    background-color:rgb(0, 174, 255);
+    height: 8vh;
+    width: 16vw;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-align: center;
+    cursor: pointer;
+    transition: all 1s;
+}
+.fa-twitter{
+    color: white;
+    margin-right: 4vh;
+}
 .line-top{
-    border: 0.2rem red solid;
-    text-indent: 2rem ;
+    border-right: 0.1rem gray solid;
     grid-area: line-top;
-
+    height: 16vh;
+    width: 1vw;
+     margin-left: 8vw;
+     margin-top: 4vh;     
 }
-
-
 .or{
-    border: 0.2rem red solid;
     text-indent: 2rem ;
     grid-area: or;
-
+    text-align: right;
+    font-size: 2rem;
+    width: 17vh;
+    height: 1vw;
+    color: gray;
 }
-
-
+.or-switch{
+    position: relative;
+height: 1vh;
+width: 1vw;
+top: 2vh;
+}
 .line-down{
-    border: 0.2rem red solid;
-    text-indent: 2rem ;
     grid-area: line-down;
-
+    position: relative;
+    border-right: 0.1rem gray solid;
+    height: 16vh;
+    width: 1vw;
+     margin-left: 8vw;
+     bottom:  8vh;
+     color: gray;
 }
-
-
-.username{
-    border: 0.2rem red solid;
-    text-indent: 2rem ;
-    grid-area: username;
-
+.sign{
+    text-indent: 4rem ;
+    grid-area: sign;
+    font-size: 2rem;
+    font-weight: bolder;
+    text-align: left;
+    margin-top: 8vh;
 }
-
-.password{
-    border: 0.2rem red solid;
-    text-indent: 2rem ;
-    grid-area: password;
-
+.form{
+    grid-area: form;
 }
-
+.username-switch{
+    position: relative;
+    left: 6vw; 
+}
+.username-switch > input{
+    height: 8vh;
+    width:  16vw;
+    outline: none;
+    border: none;
+}
+.username-switch::before{
+    position: absolute;
+    content: "";
+    right:  13vw;
+    left: -2.5vw;
+    bottom: 0;
+    top: -1.7vh;
+    height: 8vh;
+    width: 5vh;
+    border-radius: 100%;
+    background-image: url("../img/Sample_User_Icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.password-switch{
+    position: relative;
+    width: 10vw;
+    height: 16vh;
+    left:  10vh;
+}
+.password-switch > input{
+    height: 8vh;
+    width:  8vw;
+    outline: none;
+    border: none;
+}
+.password-logo{
+    position: absolute;
+    content: "";
+    right:  8vw;
+    bottom: 4rem;
+    top: -2vh;
+    height: 8vw;
+    width: 4vh;
+    border-radius: 100%;
+    background-image: url("../img/130-1303682_security-password-2-icon-password-icon-in-png.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+input::placeholder{
+    font-size: 1.4rem;
+    font-weight: bolder;
+}
 .login{
-    border: 0.2rem red solid;
-    text-indent: 2rem ;
     grid-area: login;
-
+    display: inline;
+    height: 12vh;
+    width: 28vw;
 }
-
-
+.box-switch{
+    position: relative;
+left: 6vh;
+top: 2vh;
+}
+.login-box{
+    background-color: rgb(0, 162, 255);
+    height: 6vh;
+    width: 16vh;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+.box-switch > input{
+width: 2vw;
+height: 3vh;
+}
+.remember{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    height: 1vh;
+    width: 2vh;
+    margin-right: 2vh;
+}
+.foot{
+    margin: -200px auto;
+    display: grid;
+    height: 6vh;
+    width: 55vw;
+    border: 0.1rem gray solid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "register line-foot forgotten";
+}
+.register{
+    grid-area: register;
+    color: blue;
+    font-size: 1.7rem;
+    font-weight: bolder;
+    height: 1vh;
+    width: 26vw;
+    text-align: right;
+    margin-top: 1vh;  
+}
+.line-foot{
+    grid-area: line-foot;
+    width: 2vh;
+    height: 4vh;
+    border-right: 0.1rem gray solid;
+    margin-top: 1vh;
+}
+.forgotten{
+    grid-area: forgotten;
+    color: blue;
+    font-size: 1.7rem;
+    font-weight: bolder;
+    height: 1vh;
+    width: 26vw;
+    text-align:left;
+    margin-top: 1vh;
+}
